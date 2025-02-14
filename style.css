@@ -1,0 +1,58 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://tse1.mm.bing.net/th?id=OIP.L0fHj-mM9am5u2UlL18McQHaEK&pid=Api&P=0&h=180");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header{
+
+            color: #841b2d;
+             padding: 5px;
+             text-align: center;
+             width: 100%;
+             background: linear-gradient(180deg, #d3d3d3,#696969);
+/*             position: fixed;*/
+/*             margin-bottom: 10px;*/
+        }
+        .cont {
+/*            width: 90%;*/
+            margin: 0 auto;
+/*            padding: 10px;*/
+              border: 1px solid black;
+            /*  position: fixed;
+              width: 100%;
+              margin-top: 9px;*/
+        }
+        .navb{
+            position: fixed;
+            width: 100%;
+
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .navbar{
+            background-color: gray;
+            pading: 5px;
+            font-size: 18px;
+        }

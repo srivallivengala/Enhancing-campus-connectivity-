@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KUCET</title>
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.neMoV_sF2wamLIaJFhzF-AAAAA&pid=Api&P=0&h=180" type="image/jpeg">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://tse1.mm.bing.net/th?id=OIP.L0fHj-mM9am5u2UlL18McQHaEK&pid=Api&P=0&h=180");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header{
+
+            color: #841b2d;
+             padding: 5px;
+             text-align: center;
+             width: 100%;
+             background: linear-gradient(180deg, #d3d3d3,#696969);
+/*             position: fixed;*/
+/*             margin-bottom: 10px;*/
+        }
+          .container {
+            min-width: 300px;
+            max-width: 400px;
+            height: 445px;
+            background-color: #fff;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 2px solid #CCC;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            animation: text-color 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes text-color {
+            0% {
+                color: #4CAF50;
+            }
+
+            50% {
+                color: #016064;
+            }
+
+            100% {
+                color: #5FC555;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 3px;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 90%;
+            margin-bottom: 6px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #4CAF50;
+        }
+
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            width: auto;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 10px auto;
+            animation: button-glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes button-glow {
+            0% {
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        p {
+            text-align: center;
+            margin-top: -5px;
+            color: black;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+       /* body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.shutterstock.com/image-photo/abstract-blurred-empty-college-library-600nw-1162616722.jpg");
+            background-size: cover;
+            background-position: center;
+        }*/
+
+        .cont {
+/*            width: 90%;*/
+            margin: 0 auto;
+/*            padding: 10px;*/
+              border: 1px solid black;
+            /*  position: fixed;
+              width: 100%;
+              margin-top: 9px;*/
+        }
+        .navb{
+            position: fixed;
+            width: 100%;
+
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .navbar{
+            background-color: gray;
+            pading: 5px;
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #353839;
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .footer .box-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer .box {
+            flex: 1;
+            padding: 5px;
+        }
+
+        .footer .box h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer .box a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+       @media (max-width: 768px) {
+            .menu ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .content button {
+                margin-top: 10px;
+                margin-right: 5px;
+            }
+
+            .footer .box {
+                flex: none;
+                width: 90%;
+            }
+        }
+
+       /* @media (min-width: 800px) {
+            .footer {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                margin: 0;
+            }
+
+            .container2 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+            }
+        }*/
+         .footer .box-container .box a:hover{
+            text-decoration: underline;
+            color: #696969;
+        }
+        h1 {
+            text-align: center;
+            color: #f0f8ff;
+            margin-top: 0px;
+             font-weight: bold;
+        }
+
+     .navb {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.shutterstock.com/image-photo/abstract-blurred-empty-college-library-600nw-1162616722.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+     
+    
+    </style>
+</head>
+<body>
+    <div class="navb">
+    
+    <div class="cont">
+    <nav class="navbar navbar-expand-lg navbar-light" >
+  <div class="container-fluid">
+     <a href="#" class="logo"><img src="https://tse3.mm.bing.net/th?id=OIP.neMoV_sF2wamLIaJFhzF-AAAAA&pid=Api&P=0&h=180" alt="Logo"></a>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item" id="courses">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item" id="uploadAble">
+          <a class="nav-link" href="upload_files.php">Upload</a>
+        </li>
+        <!-- <li class="nav-item" id="delete">
+            <a class="nav-link" href="delete_panel.php">Delete</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item" id="logoutLink">
+           <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<header>
+        <h2>Kakatiya University College Of Engineering And Technology</h2>
+    </header> 
+</div> <br><br><br><br><br><br><br>
+<div class="container">
+        <h1 id="formTitle">Signup</h1>
+        <!-- Signup Form -->
+        <form id="signupForm" method="POST" action="backend.php">
+            <label for="newUsername">New Username<strong style="color: red;">*</strong></label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">New Password<strong style="color: red;">*</strong></label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit" name="signup">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="toggleForm('loginForm')">Login</a></p>
+        </form>
+        <!-- Login Form -->
+        <form id="loginForm" method="POST" action="backend.php" style="display: none;">
+            <label for="username">Username<strong style="color: red;">*</strong></label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password<strong style="color: red;">*</strong></label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" name="login">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForm('signupForm')">Sign Up</a></p>
+            <p>Forgot your password? <a href="#" onclick="toggleForm('resetForm')">Reset</a></p>
+        </form>
+        <form id="resetForm" method="POST" action="backend.php" style="display: none;">
+            <label for="username">Username<strong style="color: red;">*</strong></label>
+            <input type="text" id="username" name="username" required>
+            <label for="newPassword">New Password<strong style="color: red;">*</strong></label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit" name="reset">Reset Password</button>
+            <p>Remember password? <a href="#" onclick="toggleForm('loginForm')">Login</a></p>
+            <p>Don't have an account? <a href="#" onclick="toggleForm('signupForm')">Sign Up</a></p>
+        </form>
+    </div>
+       
+   <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>More links</h3>
+                <a href="http://kucet.ac.in/college"><i class="fas fa-globe"></i> KU Official site</a>
+                <a href="http://kucet.ac.in/syllabus/"><i class="fas fa-poll"></i> KU syllabus</a>
+                <a href="https://technology.ku.edu/tech-support-students"><i class="fas fa-question-circle"></i> KU Help desk</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Hanmakonda</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Kottagudam</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Telangana</a>
+            </div>
+            <div class="box w-100">
+                <h3>Contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> 9603636883 / 7989865918</a>
+                <a href=""><i class="fas fa-envelope"></i> placement.kucet@gmail.com</a>
+                <a style="font-size: 16px;" href="#"><i class="fas fa-map-marker-alt"></i> Hanmakonda-Telangana</a>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function toggleForm(formId) {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            var resetForm = document.getElementById('resetForm');
+            var formTitle = document.getElementById('formTitle');
+            var signupLink = document.getElementById('signupLink');
+            var resetLink = document.getElementById('resetLink');
+
+            if (formId === 'loginForm') {
+                loginForm.style.display = 'flex';
+                signupForm.style.display = 'none';
+                resetForm.style.display = 'none';
+                formTitle.textContent = 'Login';
+                signupLink.style.display = 'inline';
+                resetLink.style.display = 'inline';
+            } else if (formId === 'resetForm') {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'none';
+                resetForm.style.display = 'flex';
+                formTitle.textContent = 'Reset Password';
+                signupLink.style.display = 'inline';
+                resetLink.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'flex';
+                resetForm.style.display = 'none';
+                formTitle.textContent = 'Sign Up';
+                signupLink.style.display = 'none';
+                resetLink.style.display = 'inline';
+            }
+        }
+
+        if (localStorage.getItem('u-type') !== 'admin') {
+            document.getElementById("uploadAble").style.display = "none";
+        }
+
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById("login").style.display = "none";
+        } else {
+            document.getElementById("logoutLink").style.display = "none";
+        }
+
+        function logout() {
+            window.location.href = 'logout.php';
+        }
+
+        function courses() {
+            var userType = localStorage.getItem('u-type');
+
+            // If userType is neither "admin" nor "users", show the alert and redirect
+            if (userType !== "admin" && userType !== "users") {
+                if (confirm("Access not allowed without login.")) {
+                    toggleForm('loginForm');
+                }
+            } else {
+                window.location.href = "courses.php"; // Redirect to courses page for logged-in users
+            }
+        }
+
+        // Attach logout function to logout link
+        document.getElementById("logoutLink").addEventListener("click", logout);
+        document.getElementById("courses").addEventListener("click", courses);
+    </script>
+</body>
+</html>

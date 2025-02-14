@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faculty details</title>
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.neMoV_sF2wamLIaJFhzF-AAAAA&pid=Api&P=0&h=180" type="image/jpeg">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://tse1.mm.bing.net/th?id=OIP.L0fHj-mM9am5u2UlL18McQHaEK&pid=Api&P=0&h=180");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            width: 100%;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header{
+
+            color: #841b2d;
+             padding: 5px;
+             text-align: center;
+             width: 100%;
+             background: linear-gradient(180deg, #d3d3d3,#696969);
+/*             position: fixed;*/
+/*             margin-bottom: 10px;*/
+        }
+        .cont {
+/*            width: 90%;*/
+            margin: 0 auto;
+/*            padding: 10px;*/
+              border: 1px solid black;
+             /* position: fixed;
+              width: 100%;
+              margin-top: 9px;*/
+
+        }
+        .navb{
+            position: fixed;
+            width: 100%;
+                
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .navbar{
+            background-color: gray;
+            pading: 5px;
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #353839;
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .footer .box-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer .box {
+            flex: 1;
+            padding: 5px;
+        }
+
+        .footer .box h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer .box a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .menu ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .content button {
+                margin-top: 10px;
+                margin-right: 5px;
+            }
+
+            .footer .box {
+                flex: none;
+                width: 90%;
+            }
+            .content  img {
+                object-fit: contain;
+            }
+
+        }
+        .footer .box-container .box a:hover{
+            text-decoration: underline;
+            color: #696969;
+        }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-img-top {
+      border: 2px solid #000;
+      width: 60%;
+      height: 250px;
+      max-width: 500px; /* Maximum width for larger screens */
+    }
+
+    .cards-body {
+      padding: 1rem 1rem 0;
+      margin: 10px 10px 0 0;
+      text-align: justify;
+    }
+
+    @media (min-width: 768px) {
+      /* On larger screens */
+      .cards {
+        flex-direction: row;
+        align-items: left;
+        text-align: left;
+      }
+
+      .card-img-top {
+        max-width: 400px; /* Adjusted width for larger screens */
+        margin-right: 20px; /* Space between image and content */
+      }
+
+      .cards-body {
+        margin-top: auto;
+      }
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: #007BFF;
+        padding: 20px 7px;
+        border-radius: 5px;
+    }
+
+    .container {
+        margin-top: 100px;
+    }
+
+    .subnavbar {
+      box-sizing: border-box;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .subnavbar a {
+      padding: 5px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.44s ease-in;
+    }
+
+    .subnavbar .nav-link.active {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .card-img-top {
+        height: 320px;
+      }
+    }
+     .navb {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.shutterstock.com/image-photo/abstract-blurred-empty-college-library-600nw-1162616722.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+
+    </style>
+ 
+</head>
+<body>
+ <div class="navb">
+    <div class="cont">
+    <nav class="navbar navbar-expand-lg navbar-light" >
+  <div class="container-fluid">
+     <a href="#" class="logo"><img src="https://tse3.mm.bing.net/th?id=OIP.neMoV_sF2wamLIaJFhzF-AAAAA&pid=Api&P=0&h=180" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item" id="courses">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item" id="uploadAble">
+          <a class="nav-link" href="upload_files.php">Upload</a>
+        </li>
+        <li class="nav-item" id="reg">
+          <a class="nav-link" href="reg.php">Register</a>
+        </li>
+        <li class="nav-item" id="delete">
+            <a class="nav-link" href="delete_panel.php">Delete</a>
+        </li>
+        <li class="nav-item" id="history">
+            <a class="nav-link" href="upload_history.php">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+         <li class="nav-item" id="login">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item" id="logoutLink">
+           <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+ <header>
+        <h2>Kakatiya University College Of Engineering And Technology</h2>
+    </header>
+</div> <br><br><br><br>
+<div class="subnavbar bg-dark text-light d-flex justify-content-evenly py-3">
+  <a class="nav-link active" data-target="#carousel0">CSE Department</a>
+  <a class="nav-link" data-target="#carousel1">IT Department</a>
+  <a class="nav-link" data-target="#carousel2">ECE Department</a>
+  <a class="nav-link" data-target="#carousel3">EEE Department</a>
+  <a class="nav-link" data-target="#carousel4">MECH Department</a>
+  <a class="nav-link" data-target="#carousel5">CIVIL Department</a>
+</div>
+<div class="container">
+<div id="carousel0" class="carousel slide mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Dr. MAHENDER VESHALA</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Dr. MAHENDER VESHALA, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Introducing Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel0" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel0" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="carousel1" class="carousel slide d-none mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Mahender</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Mahender, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Introducing Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="carousel2" class="carousel slide d-none mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Mahender</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Mahender, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Introducing Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="carousel3" class="carousel slide d-none mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Mahender</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Mahender, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Introducing Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="carousel4" class="carousel slide d-none mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Mahender</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Mahender, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Introducing Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div id="carousel5" class="carousel slide d-none mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="VP.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body flex-wrap">
+        <h3 class="card-title">Mr. Mahender</h3>
+        <p class="card-text">Vice Principal</p>
+        <p class="card-text">Introducing Mr. Mahender, Vice Principal of Kakatiya University's esteemed BTech college in Warangal. With a deep commitment to academic excellence and student welfare, I am honored to spearhead our institution's mission of nurturing bright minds and shaping future leaders. Our university stands as a beacon of innovation and knowledge, providing a vibrant learning environment where students are encouraged to explore, grow, and thrive. Through our comprehensive programs, cutting-edge research initiatives, and dedicated faculty, we empower individuals to realize their full potential and make meaningful contributions to society. Join us on this enriching journey of education and discovery, where every step brings joy.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="CSE-IT_HOD.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. Venugopal</h3>
+        <p class="card-text">CSE and IT HOD</p>
+        <p class="card-text">Introducing Mr. Venugopal, the Head of the Department for Computer Science and Information Technology (CSE & IT) at Kakatiya University's esteemed BTech college in Warangal. With a passion for technological innovation and academic excellence, I am dedicated to fostering a dynamic learning environment where students can excel in the ever-evolving fields of computer science and information technology. Our department is committed to providing cutting-edge education, hands-on experience, and industry-relevant skills to prepare students for successful careers in the digital age. Join us as we embark on a journey of exploration, innovation, and transformation, shaping the future of technology one student at a time.</p>
+      </div>
+    </div>
+    </div>
+    <div class="carousel-item bg-dark text-light p-3 rounded">
+    <div class="cards w-100">
+      <img src="Lakshman.jpg" class="card-img-top rounded-top" alt="...">
+      <div class="cards-body">
+        <h3 class="card-title">Mr. R. Lakshman Naik</h3>
+        <p class="card-text">Assistant professor</p>
+        <p class="card-text">Mr. R. Lakshman Naik, the Assistant professor of IT department at Kakatiya University's prestigious BTech college in Warangal. With a steadfast dedication to advancing knowledge and fostering innovation in the field of electrical engineering, I am proud to lead our department in preparing the next generation of electrical engineers. Our CSE department is committed to providing comprehensive education, practical training, and research opportunities that equip students with the skills and expertise needed to tackle real-world challenges. Join us as we embark on a journey of discovery and innovation, shaping the future of electrical engineering. </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+   <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>More links</h3>
+                <a href="http://kucet.ac.in/college"><i class="fas fa-globe"></i> KU Official site</a>
+                <a href="http://kucet.ac.in/syllabus/"><i class="fas fa-poll"></i> KU syllabus</a>
+                <a href="https://technology.ku.edu/tech-support-students"><i class="fas fa-question-circle"></i> KU Help desk</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Hanmakonda</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Kottagudam</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Telangana</a>
+            </div>
+            <div class="box w-100">
+                <h3>Contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> 9603636883 / 7989865918</a>
+                <a href=""><i class="fas fa-envelope"></i> placement.kucet@gmail.com</a>
+                <a style="font-size: 16px;" href="#"><i class="fas fa-map-marker-alt"></i> Hanmakonda-Telangana</a>
+            </div>
+        </div>
+    </section>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        // Function to set uniform height for carousel items
+        function setUniformHeight() {
+          // Initialize a variable to store the maximum height
+          let maxHeight = 0;
+    
+          // Iterate through each carousel to find the maximum item height
+          $('.carousel .carousel-item').each(function() {
+            // Get the height of the current carousel item
+            let itemHeight = $(this).outerHeight();
+            
+            // Update the maxHeight if the current item's height is greater
+            if (itemHeight > maxHeight) {
+              maxHeight = itemHeight;
+            }
+          });
+    
+          // Set all carousel items to the maximum height
+          $('.carousel .carousel-item').each(function() {
+            $(this).css('height', maxHeight + 'px');
+          });
+        }
+    
+        // Set uniform height on document ready
+        setUniformHeight();
+    
+        // Adjust uniform height on window resize
+        $(window).resize(function() {
+          setUniformHeight();
+        });
+    
+        // Navbar click event for switching carousels
+        $('.subnavbar .nav-link').click(function(){
+          var target = $(this).data('target');
+          $('.subnavbar .nav-link').removeClass('active');
+          $(this).addClass('active');
+          $('.carousel').addClass('d-none');
+          $(target).removeClass('d-none');
+    
+          // Re-adjust the height after showing a new carousel
+          setUniformHeight();
+        });
+      });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        if (localStorage.getItem('u-type') !== 'admin') {
+            document.getElementById("uploadAble").style.display = "none";
+        }
+         if (localStorage.getItem('role') !== 'yes') {
+            document.getElementById("reg").style.display = "none";
+        }
+
+        if (localStorage.getItem('role') !== 'yes') {
+            document.getElementById("delete").style.display = "none";
+        }
+         if (localStorage.getItem('role') !== 'yes') {
+            document.getElementById("history").style.display = "none";
+        }
+
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById("login").style.display = "none";
+        } else {
+            document.getElementById("logoutLink").style.display = "none";
+        } 
+
+        function logout() {         
+            window.location.href = 'logout.php';       
+        }    
+
+ function courses(){
+    var userType = localStorage.getItem('u-type');
+
+// If userType is neither "admin" nor "users", show the alert and redirect
+if (userType !== "admin" && userType !== "users") {
+    if (confirm("Access not allowed without login. Press OK to redirect to login page.")) {
+        window.location.href = "login.html";
+    }
+} else {
+    window.location.href = "courses.php"; // Redirect to courses page for logged-in users
+}
+
+}       
+
+        // Attach logout function to logout link
+        document.getElementById("logoutLink").addEventListener("click", logout);
+        document.getElementById("courses").addEventListener("click", courses);
+    </script>
+  </body>
+</html>
